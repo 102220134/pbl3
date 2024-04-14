@@ -1,0 +1,18 @@
+<%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
+<%@page import="com.pbl3.model.Student"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<% ArrayList<Student> students = (ArrayList<Student>)request.getAttribute("students"); 
+	for(Student student:students){%>
+		<p><%=student.getNameString() %></p>
+	<%}%>
+</body>
+</html>
